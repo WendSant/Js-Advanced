@@ -41,13 +41,30 @@
 
 // console.log(numeroArrow.d());
 
-function ola() {
-    console.log("olá");
+// function ola() {
+//     console.log("olá");
+// }
+
+// function saudacao(s, n) {
+//     s();
+//     console.log(n)
+// }
+
+// saudacao(ola,"Wendson");
+
+let usuarios = ["Marcos","Gustavo","Brenbo"];
+
+function inserirUsuario(nome, callback) {
+
+    setTimeout(() => {usuarios.push(nome);
+                        callback()
+                    }, 100);
 }
 
-function saudacao(s, n) {
-    s();
-    console.log(n)
+function lsUsers() {
+    console.log(usuarios);
 }
 
-saudacao(ola,"Wendson");
+inserirUsuario("Wendson", lsUsers);
+
+
