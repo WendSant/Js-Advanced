@@ -21,22 +21,33 @@
 
 // Arrow functions
 
-let arrowFunctions = x => 2 * x;
+// let arrowFunctions = x => 2 * x;
 
-let arrowFunctions2 = function (x) {
-    return 2 * x;
+// let arrowFunctions2 = function (x) {
+//     return 2 * x;
+// }
+
+
+// let arrowFunctions3 = function () {
+//     return 2 * this.x;
+// }
+
+// let numeroArrow = {
+//     x: 8,
+//     d: arrowFunctions3
+// }
+
+
+
+// console.log(numeroArrow.d());
+
+function ola() {
+    console.log("olá");
 }
 
-
-let arrowFunctions3 = function () {
-    return 2 * this.x;
+function saudacao(s, n) {
+    s();
+    console.log(n)
 }
 
-let numeroArrow = {
-    x: 8,
-    d: arrowFunctions3
-}
-
-
-
-console.log(numeroArrow.d());
+saudacao(ola,"Wendson");
