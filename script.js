@@ -2,19 +2,41 @@
 
 // This and bind
 
-function speakGeneric() {
-    console.log(this.sound);
+// function speakGeneric() {
+//     console.log(this.sound);
+// }
+
+// let dog = {
+//         sound: "Au au",
+//         speak: speakGeneric
+// }
+// let cat = {
+//     sound: "Miau",
+//     speak: speakGeneric
+// }
+
+// let bindedFunction = speakGeneric.bind(dog);
+
+// bindedFunction();
+
+// Arrow functions
+
+let arrowFunctions = x => 2 * x;
+
+let arrowFunctions2 = function (x) {
+    return 2 * x;
 }
 
-let dog = {
-        sound: "Au au",
-        speak: speakGeneric
-}
-let cat = {
-    sound: "Miau",
-    speak: speakGeneric
+
+let arrowFunctions3 = function () {
+    return 2 * this.x;
 }
 
-let bindedFunction = speakGeneric.bind(dog);
+let numeroArrow = {
+    x: 8,
+    d: arrowFunctions3
+}
 
-bindedFunction();
+
+
+console.log(numeroArrow.d());
