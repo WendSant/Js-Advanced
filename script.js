@@ -69,6 +69,37 @@
 
 // Promises
 
+// let usuarios = ["Marcos","Gustavo","Brenbo"];
+
+// function inserirUsuario(nome) {
+
+//     let promise = new Promise((resolve, reject) =>{
+//         setTimeout(() => {usuarios.push(nome);
+
+//         let error = false;
+
+//         if(!error) {
+//             resolve();
+//         }else {
+//             reject({ msg: "Error"});
+//         }
+
+//         }, 100);
+//     })
+//     return promise;
+
+    
+// }
+
+// function lsUsers() {
+//     console.log(usuarios);
+// }
+
+// inserirUsuario("Iagoa").then(lsUsers).catch((error) => {
+//     console.log(error.msg)
+// });
+
+// Async await 
 let usuarios = ["Marcos","Gustavo","Brenbo"];
 
 function inserirUsuario(nome) {
@@ -95,8 +126,16 @@ function lsUsers() {
     console.log(usuarios);
 }
 
-inserirUsuario("Iagoa").then(lsUsers).catch((error) => {
-    console.log(error.msg)
-});
+// inserirUsuario("Iagoa").then(lsUsers).catch((error) => {
+//     console.log(error.msg)
+// });
+
+async function exec(){
+    await inserirUsuario("Wend");
+    lsUsers();
+}
+
+exec();
+
 
 
