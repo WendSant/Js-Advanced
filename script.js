@@ -52,19 +52,51 @@
 
 // saudacao(ola,"Wendson");
 
+// let usuarios = ["Marcos","Gustavo","Brenbo"];
+
+// function inserirUsuario(nome, callback) {
+
+//     setTimeout(() => {usuarios.push(nome);
+//                         callback()
+//                     }, 100);
+// }
+
+// function lsUsers() {
+//     console.log(usuarios);
+// }
+
+// inserirUsuario("Wendson", lsUsers);
+
+// Promises
+
 let usuarios = ["Marcos","Gustavo","Brenbo"];
 
-function inserirUsuario(nome, callback) {
+function inserirUsuario(nome) {
 
-    setTimeout(() => {usuarios.push(nome);
-                        callback()
-                    }, 100);
+    let promise = new Promise((resolve, reject) =>{
+        setTimeout(() => {usuarios.push(nome);
+
+        let error = false;
+
+        if(!error) {
+            resolve();
+        }else {
+            reject({ msg: "Error"});
+        }
+
+        }, 100);
+    })
+    return promise;
+
+    
 }
 
 function lsUsers() {
     console.log(usuarios);
 }
 
-inserirUsuario("Wendson", lsUsers);
+inserirUsuario("Iagoa").then(lsUsers).catch((error) => {
+    console.log(error.msg)
+});
 
 
