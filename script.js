@@ -147,8 +147,17 @@ let students = [
         newStudent("Eduardo", 19),
         newStudent("Gustavo", 19)
 ];
- for(let student of students){
-        if(student.idade < 20){
-            console.log(student.nome);
-        }
- }
+
+function haveOverTwenty(student){
+    return student.idade < 20;
+}
+
+let studentsOverTwenty = students.filter(haveOverTwenty);
+
+console.log(studentsOverTwenty)
+
+//  for(let student of students){
+//         if(student.idade < 20){
+//             console.log(student.nome);
+//         }
+//  }
