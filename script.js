@@ -100,42 +100,55 @@
 // });
 
 // Async await 
-let usuarios = ["Marcos","Gustavo","Brenbo"];
+// let usuarios = ["Marcos","Gustavo","Brenbo"];
 
-function inserirUsuario(nome) {
+// function inserirUsuario(nome) {
 
-    let promise = new Promise((resolve, reject) =>{
-        setTimeout(() => {usuarios.push(nome);
+//     let promise = new Promise((resolve, reject) =>{
+//         setTimeout(() => {usuarios.push(nome);
 
-        let error = false;
+//         let error = false;
 
-        if(!error) {
-            resolve();
-        }else {
-            reject({ msg: "Error"});
-        }
+//         if(!error) {
+//             resolve();
+//         }else {
+//             reject({ msg: "Error"});
+//         }
 
-        }, 100);
-    })
-    return promise;
+//         }, 100);
+//     })
+//     return promise;
 
     
+// }
+
+// function lsUsers() {
+//     console.log(usuarios);
+// }
+
+// async function exec(){
+//     await inserirUsuario("Wend");
+//           lsUsers();
+// }
+
+// exec();
+
+
+
+// Filter
+
+function newStudent(nome, idade){
+    return {nome, idade}
 }
 
-function lsUsers() {
-    console.log(usuarios);
-}
-
-// inserirUsuario("Iagoa").then(lsUsers).catch((error) => {
-//     console.log(error.msg)
-// });
-
-async function exec(){
-    await inserirUsuario("Wend");
-    lsUsers();
-}
-
-exec();
-
-
-
+let students = [
+        newStudent("Wendson", 21),
+        newStudent("Marcos", 21),
+        newStudent("Eduardo", 19),
+        newStudent("Gustavo", 19)
+];
+ for(let student of students){
+        if(student.idade < 20){
+            console.log(student.nome);
+        }
+ }
