@@ -148,13 +148,28 @@ let students = [
         newStudent("Gustavo", 19)
 ];
 
+let players = [
+    newStudent("CArlos", 21),
+    newStudent("Brenno", 21),
+    newStudent("Kyara", 19),
+    newStudent("Ster", 19)
+];
+
 function haveOverTwenty(student){
     return student.idade < 20;
 }
 
+function haveMoreTwenty(student){
+    return student.idade > 20;
+}
+
+let studentsMoreTwenty = students.filter(haveMoreTwenty);
 let studentsOverTwenty = students.filter(haveOverTwenty);
 
-console.log(studentsOverTwenty)
+console.log(studentsOverTwenty);
+console.log(studentsMoreTwenty);
+
+
 
 //  for(let student of students){
 //         if(student.idade < 20){
