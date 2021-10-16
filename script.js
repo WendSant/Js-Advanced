@@ -155,19 +155,19 @@ let players = [
     newStudent("Ster", 19)
 ];
 
-function haveOverTwenty(student){
+function haveUnderTwenty(student){
     return student.idade < 20;
 }
 
-function haveMoreTwenty(student){
+function haveOverTwenty(student){
     return student.idade > 20;
 }
 
-let studentsMoreTwenty = students.filter(haveMoreTwenty);
+let studentsMoreTwenty = students.filter(haveUnderTwenty);
 let studentsOverTwenty = students.filter(haveOverTwenty);
 
+console.log(studentsUnderTwenty);
 console.log(studentsOverTwenty);
-console.log(studentsMoreTwenty);
 
 
 
