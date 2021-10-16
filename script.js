@@ -137,37 +137,37 @@
 
 // Filter
 
-function newStudent(nome, idade){
-    return {nome, idade}
-}
+// function newStudent(nome, idade){
+//     return {nome, idade}
+// }
 
-let students = [
-        newStudent("Wendson", 21),
-        newStudent("Marcos", 21),
-        newStudent("Eduardo", 19),
-        newStudent("Gustavo", 19)
-];
+// let students = [
+//         newStudent("Wendson", 21),
+//         newStudent("Marcos", 21),
+//         newStudent("Eduardo", 19),
+//         newStudent("Gustavo", 19)
+// ];
 
-let players = [
-    newStudent("CArlos", 21),
-    newStudent("Brenno", 21),
-    newStudent("Kyara", 19),
-    newStudent("Ster", 19)
-];
+// let players = [
+//     newStudent("CArlos", 21),
+//     newStudent("Brenno", 21),
+//     newStudent("Kyara", 19),
+//     newStudent("Ster", 19)
+// ];
 
-function haveUnderTwenty(student){
-    return student.idade < 20;
-}
+// function haveUnderTwenty(student){
+//     return student.idade < 20;
+// }
 
-function haveOverTwenty(student){
-    return student.idade > 20;
-}
+// function haveOverTwenty(student){
+//     return student.idade > 20;
+// }
 
-let studentsMoreTwenty = students.filter(haveUnderTwenty);
-let studentsOverTwenty = students.filter(haveOverTwenty);
+// let studentsMoreTwenty = students.filter(haveUnderTwenty);
+// let studentsOverTwenty = students.filter(haveOverTwenty);
 
-console.log(studentsUnderTwenty);
-console.log(studentsOverTwenty);
+// console.log(studentsUnderTwenty);
+// console.log(studentsOverTwenty);
 
 
 
@@ -176,3 +176,29 @@ console.log(studentsOverTwenty);
 //             console.log(student.nome);
 //         }
 //  }
+
+
+// Map
+
+
+function newStudent(nome, idade){
+    return {nome, idade}
+}
+
+let students = [
+    newStudent("Wendson", 21),
+    newStudent("Marcos", 21),
+    newStudent("Eduardo", 19),
+    newStudent("Gustavo", 19)
+];
+
+
+function stundentsFiveYears(student){
+    return {
+        nome: student.nome,
+        idade: student.idade + 5
+    }
+}
+
+console.log(students.map(stundentsFiveYears));
+
