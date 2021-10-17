@@ -181,24 +181,50 @@
 // Map
 
 
-function newStudent(nome, idade){
-    return {nome, idade}
-}
+// function newStudent(nome, idade){
+//     return {nome, idade}
+// }
 
-let students = [
-    newStudent("Wendson", 21),
-    newStudent("Marcos", 21),
-    newStudent("Eduardo", 19),
-    newStudent("Gustavo", 19)
-];
+// let students = [
+//     newStudent("Wendson", 21),
+//     newStudent("Marcos", 21),
+//     newStudent("Eduardo", 19),
+//     newStudent("Gustavo", 19)
+// ];
 
 
-function stundentsFiveYears(student){
-    return {
-        nome: student.nome,
-        idade: student.idade + 5
-    }
-}
+// function stundentsFiveYears(student){
+//     return {
+//         nome: student.nome,
+//         idade: student.idade + 5
+//     }
+// }
 
-console.log(students.map(stundentsFiveYears));
+// console.log(students.map(stundentsFiveYears));
+
+
+
+// Valor vs Referencia
+
+// Copiar objeto
+let studentA = {nome: "Wend", idade: 21};
+
+let studentB = Object.assign({}, studentA);
+
+studentB.idade = 22;
+
+console.log(studentB);
+
+// Uma forma de copiar Array
+
+let classA = ["Wend", "Densinho", "Bê"];
+
+let classB = [...classA];
+
+classB.push("Kiko");
+console.log(classA);
+console.log(classB);
+
+
+
 
