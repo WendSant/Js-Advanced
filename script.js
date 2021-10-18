@@ -207,23 +207,50 @@
 // Valor vs Referencia
 
 // Copiar objeto
-let studentA = {nome: "Wend", idade: 21};
+// let studentA = {nome: "Wend", idade: 21};
 
-let studentB = Object.assign({}, studentA);
+// let studentB = Object.assign({}, studentA);
 
-studentB.idade = 22;
+// studentB.idade = 22;
 
-console.log(studentB);
+// console.log(studentB);
 
-// Uma forma de copiar Array
+// // Uma forma de copiar Array
 
-let classA = ["Wend", "Densinho", "Bê"];
+// let classA = ["Wend", "Densinho", "Bê"];
 
-let classB = [...classA];
+// let classB = [...classA];
 
-classB.push("Kiko");
-console.log(classA);
-console.log(classB);
+// classB.push("Kiko");
+// console.log(classA);
+// console.log(classB);
+
+// Spread Operator
+
+let people = {
+    name: "Jose Eduardo",
+    idade: 25
+}
+
+let contact = {
+    phonenumber: 88888888,
+    email: "jose@email.com"
+}
+
+
+let copy = {
+        ...people,...contact
+}
+
+console.log(copy);
+
+let grade = [10, 8, 4, 3];
+let grade2 = [7, 6, 8, 4];
+
+let allGrades = [...grade,...grade2];
+
+console.log(allGrades);
+
 
 
 
