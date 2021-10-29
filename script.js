@@ -1,5 +1,3 @@
-
-
 // This and bind
 
 // function speakGeneric() {
@@ -27,7 +25,6 @@
 //     return 2 * x;
 // }
 
-
 // let arrowFunctions3 = function () {
 //     return 2 * this.x;
 // }
@@ -36,8 +33,6 @@
 //     x: 8,
 //     d: arrowFunctions3
 // }
-
-
 
 // console.log(numeroArrow.d());
 
@@ -88,7 +83,6 @@
 //     })
 //     return promise;
 
-    
 // }
 
 // function lsUsers() {
@@ -99,7 +93,7 @@
 //     console.log(error.msg)
 // });
 
-// Async await 
+// Async await
 // let usuarios = ["Marcos","Gustavo","Brenbo"];
 
 // function inserirUsuario(nome) {
@@ -119,7 +113,6 @@
 //     })
 //     return promise;
 
-    
 // }
 
 // function lsUsers() {
@@ -132,8 +125,6 @@
 // }
 
 // exec();
-
-
 
 // Filter
 
@@ -169,17 +160,13 @@
 // console.log(studentsUnderTwenty);
 // console.log(studentsOverTwenty);
 
-
-
 //  for(let student of students){
 //         if(student.idade < 20){
 //             console.log(student.nome);
 //         }
 //  }
 
-
 // Map
-
 
 // function newStudent(nome, idade){
 //     return {nome, idade}
@@ -192,7 +179,6 @@
 //     newStudent("Gustavo", 19)
 // ];
 
-
 // function stundentsFiveYears(student){
 //     return {
 //         nome: student.nome,
@@ -201,8 +187,6 @@
 // }
 
 // console.log(students.map(stundentsFiveYears));
-
-
 
 // Valor vs Referencia
 
@@ -237,7 +221,6 @@
 //     email: "jose@email.com"
 // }
 
-
 // let copy = {
 //         ...people,...contact
 // }
@@ -251,9 +234,31 @@
 
 // console.log(allGrades);
 
+// Desestruturando um objeto
 
+let aluno = {
+  matricula: 1234,
+  nome: "Marcos",
+  telefone: 987654432,
+  cidade: "Barra do piraí",
+};
 
+let aluno1 = {
+  matricula: 1235,
+  nome: "João",
+  telefone: 988654214,
+  cidade: "Barra do piraí",
+};
+let aluno2 = {
+  matricula: 1235,
+  nome: "Jose",
+  telefone: 988654214,
+  cidade: "Barra do piraí",
+};
 
+let alunos = [aluno, aluno1, aluno2];
 
+let [marcos, ...others] = alunos;
 
-
+console.log(marcos);
+console.log(others);
