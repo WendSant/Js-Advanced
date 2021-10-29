@@ -227,29 +227,31 @@
 
 // Spread Operator
 
-let people = {
-    name: "Jose Eduardo",
-    idade: 25
-}
+// let people = {
+//     name: "Jose Eduardo",
+//     idade: 25
+// }
 
-let contact = {
-    phonenumber: 88888888,
-    email: "jose@email.com"
-}
+// let contact = {
+//     phonenumber: 88888888,
+//     email: "jose@email.com"
+// }
 
 
-let copy = {
-        ...people,...contact
-}
+// let copy = {
+//         ...people,...contact
+// }
 
-console.log(copy);
+// console.log(copy);
 
-let grade = [10, 8, 4, 3];
-let grade2 = [7, 6, 8, 4];
+// let grade = [10, 8, 4, 3];
+// let grade2 = [7, 6, 8, 4];
 
-let allGrades = [...grade,...grade2];
+// let allGrades = [...grade,...grade2];
 
-console.log(allGrades);
+// console.log(allGrades);
+
+
 
 
 
