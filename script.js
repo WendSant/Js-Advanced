@@ -236,29 +236,46 @@
 
 // Desestruturando um objeto
 
-let aluno = {
-  matricula: 1234,
-  nome: "Marcos",
-  telefone: 987654432,
-  cidade: "Barra do piraí",
-};
+// let aluno = {
+//   matricula: 1234,
+//   nome: "Marcos",
+//   telefone: 987654432,
+//   cidade: "Barra do piraí",
+// };
 
-let aluno1 = {
-  matricula: 1235,
-  nome: "João",
-  telefone: 988654214,
-  cidade: "Barra do piraí",
-};
-let aluno2 = {
-  matricula: 1235,
-  nome: "Jose",
-  telefone: 988654214,
-  cidade: "Barra do piraí",
-};
+// let aluno1 = {
+//   matricula: 1235,
+//   nome: "João",
+//   telefone: 988654214,
+//   cidade: "Barra do piraí",
+// };
+// let aluno2 = {
+//   matricula: 1235,
+//   nome: "Jose",
+//   telefone: 988654214,
+//   cidade: "Barra do piraí",
+// };
 
-let alunos = [aluno, aluno1, aluno2];
+// let alunos = [aluno, aluno1, aluno2];
 
-let [marcos, ...others] = alunos;
+// let [marcos, ...others] = alunos;
 
-console.log(marcos);
-console.log(others);
+// console.log(marcos);
+// console.log(others);
+
+function newStudent(name, age) {
+  return { name, age };
+}
+
+let students = [
+  newStudent("João", 29),
+  newStudent("Marcela", 18),
+  newStudent("Leticia", 34),
+  newStudent("Elenilse", 26),
+];
+
+function ageClass(total, student) {
+  return total + student.name;
+}
+
+console.log(students.reduce(ageClass, ""));
